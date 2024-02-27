@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {// 配置选项
+    "composite": true,// 启用项目编译
+    "module": "esnext",// 指定生成哪个模块系统代码
+    "moduleResolution": "node"//"classic",// 选择模块解析策略
+  },
+  "exclude": ["node_modules","public"],// 排除的文件
+  "include": [//  包含的文件
+    "vite.config.ts",
+    "config/**/*.ts",
+    "config/**/*.d.ts",
+  ]
+}
