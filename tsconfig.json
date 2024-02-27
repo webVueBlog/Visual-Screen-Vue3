@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {// 编译选项
+    "target": "esnext",// 目标语言的版本
+    "useDefineForClassFields": true,// 类的静态属性也使用 define 进行声明
+    "module": "esnext",// 生成代码的模板标准
+    "moduleResolution": "node",// 模块解析策略
+    "strict": true,// 开启所有严格类型检查
+    "jsx": "preserve",// 在 .tsx 文件里支持 JSX
+    "sourceMap": true,// 生成目标文件的 sourceMap
+    "resolveJsonModule": true,// 允许导入 .json 文件
+    "isolatedModules": true,// 将每个文件作为单独的模块
+    "esModuleInterop": true,// 允许 export= 导出，由来自文件系统模块提供的导入通过导出= 导入
+    "lib": [// 指定要包含在编译中的库文件
+      "esnext",// 启用所有 ECMAScript 语言版本中包含的功能
+      "dom"// 启用 DOM 中的部分特性
+    ],
+    "baseUrl": "./",// 解析非相对模块名的基准目录
+    "types": [// 指定要包含的类型声明文件名列表
+      "node",
+      "vite/client",
+      "element-plus/global"
+    ],
+    "paths": {// 模块名到基于 baseUrl 的路径映射的列表
+      "@/*": [
+        "src/*"
+      ],
+      "api/*": [
+        "src/api/*"
+      ],
+    }
+  },
+  "include": [/* 指定要编译的文件列表 */
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/env.d.ts",
+    "types/*.d.ts"
+  ],
+  "exclude": ["node_modules","public"],/* 指定要排除的文件列表 */
+  "references": [/* 指定要包含的引用列表 */
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
